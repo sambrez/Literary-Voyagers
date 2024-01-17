@@ -1,3 +1,4 @@
+// to be reformatted
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -11,7 +12,7 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
