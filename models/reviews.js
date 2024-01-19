@@ -37,7 +37,23 @@ Reviews.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
         // true for thumbs up, false for thumbs down (this can be changed to 0/10 if time allows)
-    }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
+    book_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'books',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
