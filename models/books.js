@@ -2,7 +2,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Books extends Model {}
+class Books extends Model { }
 
 Books.init(
   {
@@ -20,14 +20,6 @@ Books.init(
         notEmpty: true,
       }
     },
-    // description: {
-    //   type: DataTypes.STRING,
-    // }, for review.js
-    // date_created: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    //   defaultValue: DataTypes.NOW,
-    // }, for reviews.js
     author: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -43,8 +35,7 @@ Books.init(
         isAlpha: true,
         notEmpty: true,
       }
-
-      },
+    },
   },
   {
     sequelize,
