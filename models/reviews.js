@@ -1,0 +1,51 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+
+class Reviews extends Model {}
+
+Reviews.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    reviewTitle: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlpha: true,
+        notEmpty: true,
+      }
+    },
+    review: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isAlphanumeric: true,
+        notEmpty: true
+      }
+    }, 
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    }, 
+    recommendation: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+        // true for thumbs up, false for thumbs down (this can be changed to 0/10 if time allows)
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'reviews',
+  }
+);
+
+module.exports = Reviews;
