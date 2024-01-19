@@ -1,13 +1,11 @@
 const router = require('express').Router();
 
 const apiRoutes = require('./api');
-const userRoutes = require('./UserRoutes');
-// To be renamed with updated controller files
-const projectRoutes = require('.projectRoutes');
+const homeRoutes = require('./homepageRoute');
+const profileRoutes = require('.profileRoute');
 
 router.use('/api', apiRoutes);
-router.use('/users', userRoutes);
-// To be renamed with updated controller files
-router.use('/projects', projectRoutes);
+router.use('/', homeRoutes);
+router.use('/profile', profileRoutes);
 
 module.exports = router;
