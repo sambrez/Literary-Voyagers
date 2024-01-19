@@ -1,8 +1,11 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+// To be updated based on final models
+const { User, Books, Reviews } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const bookData = require('./bookData.json');
+const reviewData = require('./bookData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,12 +15,14 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  for (const book of bookData) {
+    await Books.create({
+      ...book,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
+
+  const review = await Reviews.bulkCreate(reviewData);
 
   process.exit(0);
 };
