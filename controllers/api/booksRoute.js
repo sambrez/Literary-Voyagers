@@ -1,36 +1,47 @@
-const router = require('express').Router();
-const { Books } = require('../../models');
+const express = require('express');
+const router = express.Router();
+const { Books } = require('../models');
 
-router.post('/', async (req, res) => {
+// GET all books
+router.get('/books', async (req, res) => {
   try {
-    const newProject = await Project.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(newProject);
-  } catch (err) {
-    res.status(400).json(err);
+    const books = await Books.findAll();
+    res.json(books);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-router.delete('/:id', async (req, res) => {
-  try {
-    const projectData = await Project.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
+// GET a book by ID
+router.get('/books/:id', async (req, res) => {
+  const { id } = req.params;
 
-    if (!projectData) {
-      res.status(404).json({ message: 'No project found with this id!' });
+  try {
+    const book = await Books.findByPk(id);
+
+    if (!book) {
+      res.status(404).json({ error: 'Book not found' });
       return;
     }
 
-    res.status(200).json(projectData);
-  } catch (err) {
-    res.status(500).json(err);
+    res.json(book);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+// POST a new book
+router.post('/books', async (req, res) => {
+  const { title, author, genre, user_id } = req.body;
+
+  try {
+    const newBook = await Books.create({ title, author, genre, user_id });
+    res.status(201).json(newBook);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
