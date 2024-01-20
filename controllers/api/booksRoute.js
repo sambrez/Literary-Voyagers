@@ -3,7 +3,7 @@ const router = express.Router();
 const { Books } = require('../models');
 
 // GET all books
-router.get('/books', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const books = await Books.findAll();
     res.json(books);
@@ -14,7 +14,7 @@ router.get('/books', async (req, res) => {
 });
 
 // GET a book by ID
-router.get('/books/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -33,7 +33,7 @@ router.get('/books/:id', async (req, res) => {
 });
 
 // POST a new book
-router.post('/books', async (req, res) => {
+router.post('/', async (req, res) => {
   const { title, author, genre, user_id } = req.body;
 
   try {
