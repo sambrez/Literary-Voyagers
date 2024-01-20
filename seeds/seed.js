@@ -1,5 +1,4 @@
 const sequelize = require('../config/connection');
-// To be updated based on final models
 const { User, Books, Reviews } = require('../models');
 
 const userData = require('./userData.json');

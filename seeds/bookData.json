@@ -1,18 +1,27 @@
 [
     {
-      "name": "Music Near Me",
-      "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "needed_funding": 5000
+      "reviewTitle": "My favorite book!",
+      "review": "This is the best book I have read in several years. Great plot and character development!",
+      "date_created": "2/27/2023",
+      "recommendation": true,
+      "user_id": 1,
+      "book_id": 2
     },
     {
-      "name": "The Ultimate Tech Quiz",
-      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-      "needed_funding": 10000
+      "reviewTitle": "This one was tough.",
+      "review": "I really struggled to get through this book. Kept waiting for it to build but it just never quite did. Certainly not the worst book I have ever read but I wouldn't put it at the top of your pile!",
+      "date_created": "7/29/2022",
+      "recommendation": false,
+      "user_id": 3,
+      "book_id": 1
     },
     {
-      "name": "Roll 'Em Up",
-      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-      "needed_funding": 800
+      "reviewTitle": "Slow start, strong finish",
+      "review": "The first ten or so chapters of this book are a challenge. The plot is very slow to develop. But if you stick with it you will be pleasantly suprised.",
+      "date_created": "9/3/2023",
+      "recommendation": true,
+      "user_id": 2,
+      "book_id": 3
     }
   ]
   
