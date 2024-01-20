@@ -1,4 +1,3 @@
-// to be reformatted
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -14,27 +13,15 @@ Books.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlpha: true,
-        notEmpty: true,
-      }
+      allowNull: false
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlpha: true,
-        notEmpty: true,
-      }
+      allowNull: false
     },
     genre: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlpha: true,
-        notEmpty: true,
-      }
+      allowNull: false
     },
     user_id: {
       type: DataTypes.INTEGER,
