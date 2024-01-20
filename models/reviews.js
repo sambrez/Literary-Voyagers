@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 
 
 class Reviews extends Model {}
@@ -14,19 +14,11 @@ Reviews.init(
     },
     reviewTitle: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlpha: true,
-        notEmpty: true,
-      }
+      allowNull: false
     },
     review: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        isAlphanumeric: true,
-        notEmpty: true
-      }
+      allowNull: false
     }, 
     date_created: {
       type: DataTypes.DATE,
