@@ -2,19 +2,26 @@ const express = require('express');
 const router = express.Router();
 const { Reviews } = require('../../models');
 
-// GET all reviews
-router.get('/reviews', async (req, res) => {
-  try {
-    const reviews = await Reviews.findAll();
-    res.json(reviews);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+router.use((req, res, next) => {
+  console.log('Request received:', req.method, req.url);
+  next();
 });
 
+// GET all reviews
+router.get('/', async (req, res) => {
+    try {
+      console.log('Fetching all reviews...');
+      const reviews = await Reviews.findAll();
+      console.log('Reviews:', reviews); 
+      res.json(reviews);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+
 // GET a review by ID
-router.get('/reviews/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -33,7 +40,7 @@ router.get('/reviews/:id', async (req, res) => {
 });
 
 // POST a new review
-router.post('/reviews', async (req, res) => {
+router.post('/', async (req, res) => {
   const { reviewTitle, review, recommendation, user_id, book_id } = req.body;
 
   try {
