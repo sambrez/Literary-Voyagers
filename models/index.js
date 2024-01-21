@@ -24,7 +24,8 @@ Reviews.belongsTo(User, {
 });
 
 Reviews.belongsTo(Books, {
-  foreignKey: 'books_id'
+  foreignKey: 'book_id'
 })
+// changed books to book, but may need to alter different file, is this causing review issues?
 
 module.exports = { User, Books, Reviews };
