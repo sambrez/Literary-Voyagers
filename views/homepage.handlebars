@@ -4,3 +4,22 @@
   {{> allBooks book}}
   {{/each}}
 </div>
+
+<div class="application">
+  <h1>Book Club</h1>
+  <div>
+    {{> login}}
+  </div>
+  {{#if user}}
+    <div>
+      {{> profile}}
+    </div>
+    <div>
+      {{> bookList}}
+    </div>
+  {{else}}
+    <div>
+      {{> book}}
+    </div>
+  {{/if}}
+</div>
