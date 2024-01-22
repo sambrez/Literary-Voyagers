@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
         });
 
         if (login.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/');
         } else {
             ;
         }
