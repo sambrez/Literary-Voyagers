@@ -63,7 +63,7 @@ router.get("/books/:id", withAuth, async (req, res) => {
 // for login and sign up
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/");
     return;
   } else {
     res.render("login");
