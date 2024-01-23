@@ -40,9 +40,9 @@ const newReview = async (event) => {
   };
 
   document
-  .querySelector('.new-project-form')
+  .querySelector('.new-review')
   .addEventListener('submit', newReview);
 
   document
-  .querySelector('.project-list')
+  .querySelector('.delete-review')
   .addEventListener('click', deleteReview);
