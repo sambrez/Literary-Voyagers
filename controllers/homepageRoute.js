@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
 // GET for single book including associated reviews
 router.get("/books/:id", withAuth, async (req, res) => {
   try {
-    const oneBook = await Post.findOne({
+    const oneBook = await Books.findOne({
       where: { id: req.params.id },
       attributes: ["title", "author", "genre"],
       include: [
