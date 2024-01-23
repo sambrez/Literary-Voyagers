@@ -2,6 +2,25 @@ const router = require("express").Router();
 const { Books, Reviews, User } = require("../models");
 const withAuth = require("../utils/auth");
 
+//top drop down 
+<script>
+  {!--Menu-
+  <div class="book-club-menu">
+    <button class="dropdown-btn">Menu</button>
+    <div class="dropdown-container">
+      <ul>
+        <li><a href="#">{{homeLink}}</a></li>
+        <li><a href="#">{{aboutLink}}</a></li>
+        <li><a href="#">{{booksLink}}</a></li>
+        <li><a href="#">{{authorsLink}}</a></li>
+        <li><a href="#">{{reviewsLink}}</a></li>
+        <li><a href="#">{{eventsLink}}</a></li>
+      </ul>
+    </div>
+  </div>
+  }
+</script>
+
 // GET for all books posted by all users
 router.get("/", async (req, res) => {
   try {
@@ -69,5 +88,10 @@ router.get("/login", (req, res) => {
     res.render("login");
   }
 });
+
+
+
+
+
 
 module.exports = router;
