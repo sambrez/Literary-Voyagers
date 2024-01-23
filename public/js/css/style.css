@@ -1,7 +1,13 @@
 /* Header Bar */
+.title {
+color: black;
+
+}
+
+
 .header {
     background-color: #333;
-    color: #fff;
+    color: #0f4daa;
     padding: 10px;
     text-align: center;
   }
