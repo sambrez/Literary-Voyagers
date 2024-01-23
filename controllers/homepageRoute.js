@@ -3,7 +3,7 @@ const { Books, Reviews, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 //top drop down 
-<script>
+{/* <script>
   {!--Menu-
   <div class="book-club-menu">
     <button class="dropdown-btn">Menu</button>
@@ -19,7 +19,7 @@ const withAuth = require("../utils/auth");
     </div>
   </div>
   }
-</script>
+</script> */}
 
 // GET for all books posted by all users
 router.get("/", async (req, res) => {
