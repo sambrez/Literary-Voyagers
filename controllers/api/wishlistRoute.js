@@ -7,7 +7,7 @@ const { sendEmail } = require('.utils\sendEmail.js');
 // POST to Wishlist
 router.post('/wishlist', async (req, res) => {
     try {
-      const userId = req.session.user_id; // Assuming you store user_id in the session
+      const userId = req.session.user_id;
   
       const { bookId, bookTitle } = req.body;
   
