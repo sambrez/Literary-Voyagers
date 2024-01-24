@@ -16,7 +16,7 @@ async function addBook() {
     };
   
     try {
-      const response = await fetch('./api/bookRoute', {
+      const response = await fetch('/api/books', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
