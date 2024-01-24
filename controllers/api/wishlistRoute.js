@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const { Books } = require('../../models');
 const { Wishlist } = require('../../models');
-const { sendEmail } = require('.utils\sendEmail.js');
+const { sendEmail } = require('../../utils/sendEmail');
 
 // POST to Wishlist
 router.post('/wishlist', async (req, res) => {
