@@ -21,4 +21,8 @@ router.get('/', withAuth, async (req, res) => {
       }
 });
 
+router.get("/api/posts/add_book", (req, res) => {
+  res.render("newBook");
+});
+
 module.exports = router;
