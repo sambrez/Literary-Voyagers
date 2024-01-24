@@ -21,7 +21,7 @@ router.get('/', withAuth, async (req, res) => {
       }
 });
 
-router.get("/api/posts/", (req, res) => {
+router.get("/add_book", (req, res) => {
   res.render("newBook");
 });
 
