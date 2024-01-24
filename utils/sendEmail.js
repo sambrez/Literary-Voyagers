@@ -8,7 +8,7 @@ const sendEmail = async (to, subject, text) => {
       secure: true,
       auth: {
         user: 'bootcamp25@yahoo.com',
-        pass: 'Project2Group5!',
+        pass: 'ENTER REAL ONE HERE FOR TESTING',
       },
     });
 
