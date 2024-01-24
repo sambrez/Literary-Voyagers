@@ -33,7 +33,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // POST a new book
-router.post('/add_book', async (req, res) => {
+router.post('/', async (req, res) => {
   const { title, author, genre, recommendation, review, user_id } = req.body;
 
   try {
