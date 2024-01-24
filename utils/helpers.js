@@ -4,10 +4,10 @@ module.exports = {
       return date.toLocaleDateString();
     },
     get_thumbsUp: () => {
-        return `<span for="img" aria-label="thumbs up">👍</span>`;
+        return `👍`;
     },
     get_thumbsDown: () => {
-        return `<span for="img" aria-label="thumbs down">👎</span>`;
+        return `👎`;
     },
   };
   
