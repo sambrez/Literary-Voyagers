@@ -25,12 +25,12 @@ Books.init(
     },
     recommendation: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      // allowNull: false,
         // true for thumbs up, false for thumbs down (this can be changed to 0/10 if time allows)
     },
     review: {
       type: DataTypes.STRING,
-      allowNull: false
+      // allowNull: false
     }, 
     user_id: {
       type: DataTypes.INTEGER,
