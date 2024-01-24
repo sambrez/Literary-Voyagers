@@ -23,7 +23,7 @@ Wishlist.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'book',
+        model: 'books',
         key: 'id',
       },
     },
