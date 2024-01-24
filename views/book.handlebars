@@ -1,8 +1,22 @@
 <div class="book">
-  <h2>{{book.title}}</h2>
-  <p>{{book.author}}</p>
-  <p>{{book.description}}</p>
-  <p>{{book.price}}</p>
-  <p>{{book.rating}}</p>
-  <button>Purchase Link</button>
+  {{> allBooks book}}
+  <div>
+    <h3>Review this Book</h3>
+    <form class="review-form">
+    <label for="review">Recommendation</label>
+    <input type="checkbox" id="yes" name="yes" value="thumbs-up">
+    <label for="yes-rec"> Read this book!</label><br>
+    <input type="checkbox" id="no" name="no" value="thumbs-down">
+    <label for="no-rec"> Stay away!</label><br>
+    <label for="review">Write a Review</label>
+    <input id="review" type="text">
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+  
+  <button>Add to Wishlist!</button>
+
 </div>
+
+<script src="/js/review.js"></script>
+<script src="/js/wishlist.js"></script>
