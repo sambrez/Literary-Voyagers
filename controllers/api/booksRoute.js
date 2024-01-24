@@ -34,10 +34,10 @@ router.get('/:id', async (req, res) => {
 
 // POST a new book
 router.post('/', async (req, res) => {
-  const { title, author, genre, user_id } = req.body;
+  const { title, author, genre, recommendation, review, user_id } = req.body;
 
   try {
-    const newBook = await Books.create({ title, author, genre, user_id });
+    const newBook = await Books.create({ title, author, genre, recommendation, review, user_id });
     res.status(201).json(newBook);
   } catch (error) {
     console.error(error);
