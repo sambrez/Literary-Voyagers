@@ -59,4 +59,25 @@ router.post('/', async (req, res) => {
   }
 });
 
+// DELETE a review by ID
+// router.delete('/:id', async (req, res) => {
+//   const { id } = req.params;
+
+//   try {
+//     const review = await Reviews.findByPk(id);
+
+//     if (!review) {
+//       res.status(404).json({ error: 'Review not found' });
+//       return;
+//     }
+
+//     await review.destroy();
+
+//     res.json({ message: 'Review deleted successfully' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ error: 'Internal Server Error' });
+//   }
+// });
+
 module.exports = router;
