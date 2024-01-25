@@ -1,10 +1,10 @@
-async function addBook() {
+const addBook = async (event) => {
     const title = document.querySelector('title').value;
     const author = document.querySelector('author').value;
     const genre = document.querySelector('genre').value;
     const recommendation = document.querySelector('rec').value;
     const review = document.querySelector('review').value;
-    const userId = document.querySelector('userId').value; // This may need to be pulled innately from session?
+    const userId = req.sessions.user_id
   
     const data = {
       title: title,
@@ -35,4 +35,8 @@ async function addBook() {
     } catch (error) {
       console.error('Error adding book:', error.message);
     }
-  }
+  };
+
+  document
+    .querySelector('#book-form')
+    .addEventListener('submit', addBook);
