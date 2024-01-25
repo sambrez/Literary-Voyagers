@@ -3,17 +3,22 @@
   <div>
     <h3>Review this Book</h3>
     <form class="review-form">
-    <label for="review">Recommendation</label>
-    <input type="checkbox" id="yes" name="yes" value="thumbs-up">
-    <label for="yes-rec"> Read this book!</label><br>
-    <input type="checkbox" id="no" name="no" value="thumbs-down">
-    <label for="no-rec"> Stay away!</label><br>
-    <label for="review">Write a Review</label>
-    <input id="review" type="text">
-    <button type="submit">Submit</button>
-  </form>
+      <fieldset>
+        <legend>Recommendation</legend>
+        <label for="recommendation">Do you recommend this book?</label>
+        <select name="recommendation" id="recommendation">
+          <option value="yes">YES</option>
+          <option value="no">NO</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Review</legend>
+        <textarea id="review" name="review" rows="4" cols="50">Write your review</textarea>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
   </div>
-  
+
   <button>Add to Wishlist!</button>
 
 </div>
