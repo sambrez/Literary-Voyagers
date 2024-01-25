@@ -7,8 +7,6 @@ router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
-    const appEmail = 'bootcamp25@yahoo.com';
-
     // Send a welcome email to the new user
     const welcomeSubject = 'Welcome to Liteary Voyagers!';
     const welcomeMessage = `Hello ${userData.name},\n\nThank you for joining Literary Voyagers! Stay Tuned for the most up-to-date book reviews!`;
