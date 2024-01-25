@@ -1,10 +1,19 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const { sendEmail } = require('../../utils/sendEmail');
 
 // signup new user
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
+
+    const appEmail = 'bootcamp25@yahoo.com';
+
+    // Send a welcome email to the new user
+    const welcomeSubject = 'Welcome to Liteary Voyagers!';
+    const welcomeMessage = `Hello ${userData.name},\n\nThank you for joining Literary Voyagers! Stay Tuned for the most up-to-date book reviews!`;
+
+    await sendEmail(userData.email, welcomeSubject, welcomeMessage);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -13,6 +22,7 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    console.error('Error creating user:', err);
     res.status(400).json(err);
   }
 });

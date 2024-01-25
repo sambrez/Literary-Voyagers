@@ -3,10 +3,12 @@ const nodemailer = require('nodemailer');
 const sendEmail = async (to, subject, text) => {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'yahoo',
+      host: 'smtp.mail.yahoo.com',
+      port: 465,
+      secure: true,
       auth: {
-        user: 'bootcamp25@yahoo.com', 
-        pass: 'Project2Group5!', 
+        user: 'bootcamp25@yahoo.com',
+        pass: 'ENTER REAL ONE HERE FOR TESTING',
       },
     });
 
