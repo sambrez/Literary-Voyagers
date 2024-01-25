@@ -1,17 +1,23 @@
-<div>
-  <div>
+<div class="card text-center">
+  <div class="card-header">
     <a href="/books/{{id}}">
       <h2>{{title}}</h2><a />
-      <h3>Author: {{author}}</h3>
-      <h3>Genre: {{genre}}</h3>
-      <h3>Recommendation:
-        {{#if recommendation}}
-        {{get_thumbsUp}}
-        {{else}}
-        {{get_thumbsDown}}
-        {{/if}}
-      </h3>
-      <h3>Review: {{review}}</h3>
-      <h5>Posted by {{user.name}}</h5>
+  </div>
+  <div class="card-title">
+    <h3>Author: {{author}}</h3>
+    <h3>Genre: {{genre}}</h3>
+  </div>
+  <div class="card-body">
+    <h3>Recommendation:</h3>
+    {{#if recommendation}}
+    {{get_thumbsUp}}
+    {{else}}
+    {{get_thumbsDown}}
+    {{/if}}
+    <h3>Review:</h3>
+    <p class="card-text">{{review}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    <h5 class="card-text">Posted by {{user.name}}</h5>
   </div>
 </div>
