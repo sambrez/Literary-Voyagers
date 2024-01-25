@@ -13,16 +13,16 @@
 <body>
   <div class="box">
     <p class="text">Literary Voyagers</p>
-  </div>
+  
 
-  <div class="flex-column justify-space-around">
+  <div class="flex-column justify-space-around bg-9">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-    
+   
         <a href="/">LITERARY VOYAGERS</a>
       </h1>
-      <header class="header">
-  <nav>
+      <header class="header bg-none">
+  <nav class="d-flex justify-content-end">
     <ul>
       <li class="dropdown">
         <a href="#">Menu</a>
@@ -33,19 +33,18 @@
         </div>
       </li>
     </ul>
-  </nav>
-</header>
-      <nav>
-        <!-- Conditionally render login or logout links -->
+    <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-      </nav>
+  </nav>
+</header>
+      
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="container container-fluid mt-5 bg-none">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>

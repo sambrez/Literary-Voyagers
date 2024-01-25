@@ -92,5 +92,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 4px #fff(255, 253, 253, 0.1);
 }
-
+ .bg-none {
+  background-color: rgba(0, 255, 255, 0);
+ }
  
