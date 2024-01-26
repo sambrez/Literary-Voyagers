@@ -81,7 +81,7 @@
   
   font-family: Arial;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 0px;
  
   
  }
@@ -109,5 +109,6 @@ a {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   line-height: 2.0;
   margin-bottom:0px;
+  
 }
 
