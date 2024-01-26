@@ -19,13 +19,25 @@ Wishlist.init(
         key: 'id',
       },
     },
-    bookId: {
+    book_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: 'books',
         key: 'id',
       },
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
   },
   {
