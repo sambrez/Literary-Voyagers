@@ -6,16 +6,9 @@
   background-size: cover;
  }
 
-.title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-    
-    }
     
   .header {
-    background-color: #ffffff;
+    background-color: #ffffff00;
     color: #000cae;
     padding: 10px;
     text-align: center;
@@ -96,3 +89,14 @@
   background-color: rgba(0, 255, 255, 0);
  }
  
+ h1 {
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   font-style: normal;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  margin: 0;
+  
+ }
