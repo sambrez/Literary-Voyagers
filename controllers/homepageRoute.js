@@ -58,7 +58,7 @@ router.get("/books/:id", withAuth, async (req, res) => {
         },
         {
           model: Reviews,
-          attributes: ["reviewTitle", "review", "date_created", "recommendation", "user_id"],
+          attributes: ["review", "date_created", "recommendation", "user_id"],
         },
       ],
     });
