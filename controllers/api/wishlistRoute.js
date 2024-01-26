@@ -5,7 +5,7 @@ const { Wishlist } = require('../../models');
 const { sendEmail } = require('../../utils/sendEmail');
 
 // POST to Wishlist
-router.post('/wishlist', async (req, res) => {
+router.post('/add', async (req, res) => {
     try {
       const userId = req.session.user_id;
   
@@ -42,7 +42,7 @@ router.get('/', async (req, res) => {
       // Retrieve the user's wishlist
       const userWishlist = await Wishlist.findAll({
         where: { userId },
-        include: [{ model: Books, attributes: ['id', 'title'] }],
+        include: [{ model: Books, attributes: ['id', 'title', 'genre'] }],
       });
   
       res.json(userWishlist);
