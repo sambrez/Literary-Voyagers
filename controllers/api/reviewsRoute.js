@@ -41,15 +41,15 @@ router.get('/:id', async (req, res) => {
 
 // POST a new review
 router.post('/', async (req, res) => {
-  const { reviewTitle, review, recommendation, user_id, book_id } = req.body;
+  const {recommendation, review, book_id} = req.body;
+  const user_id = req.session.user_id;
 
   try {
     const newReview = await Reviews.create({
-      reviewTitle,
-      review,
       recommendation,
+      review,
       user_id,
-      book_id,
+      book_id
     });
 
     res.status(201).json(newReview);

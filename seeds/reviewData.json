@@ -1,6 +1,5 @@
 [
     {
-      "reviewTitle": "My favorite book!",
       "review": "This is the best book I have read in several years. Great plot and character development!",
       "date_created": "2/27/2023",
       "recommendation": true,
@@ -8,7 +7,6 @@
       "book_id": 2
     },
     {
-      "reviewTitle": "This one was tough.",
       "review": "I really struggled to get through this book. Kept waiting for it to build but it just never quite did. Certainly not the worst book I have ever read but I wouldn't put it at the top of your pile!",
       "date_created": "7/29/2022",
       "recommendation": false,
@@ -16,7 +14,6 @@
       "book_id": 1
     },
     {
-      "reviewTitle": "Slow start, strong finish",
       "review": "The first ten or so chapters of this book are a challenge. The plot is very slow to develop. But if you stick with it you will be pleasantly suprised.",
       "date_created": "9/3/2023",
       "recommendation": true,

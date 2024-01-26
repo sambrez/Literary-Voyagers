@@ -14,7 +14,6 @@ Reviews.init(
     },
     reviewTitle: {
       type: DataTypes.STRING,
-      allowNull: false
     },
     review: {
       type: DataTypes.STRING,
