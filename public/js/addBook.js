@@ -1,24 +1,22 @@
 const addBook = async (event) => {
   event.preventDefault();
 
-  const title = document.querySelector('title').value;
-  const author = document.querySelector('author').value;
-  const genre = document.querySelector('genre').value;
-  const recommendation = document.querySelector('rec').value;
-  const review = document.querySelector('review').value;
-  const userId = req.sessions.user_id
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  const genre = document.querySelector('#genre').value;
+  const recommendation = document.querySelector('#rec').value;
+  const review = document.querySelector('#review').value;
 
   const data = {
     title: title,
     author: author,
     genre: genre,
     recommendation: recommendation,
-    review: review,
-    user_id: userId
+    review: review
   };
 
   try {
-    const response = await fetch('/api/books/add_book', {
+    const response = await fetch('/api/books', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
