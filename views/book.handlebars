@@ -1,5 +1,26 @@
 <div class="book">
-  {{> allBooks book}}
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>{{book.title}}</h2>
+    </div>
+    <div class="card-title">
+      <h3>Author: {{book.author}}</h3>
+      <h3>Genre: {{book.genre}}</h3>
+    </div>
+    <div class="card-body">
+      <h3>Recommendation:</h3>
+      {{#if book.recommendation}}
+      {{get_thumbsUp}}
+      {{else}}
+      {{get_thumbsDown}}
+      {{/if}}
+      <h3>Review:</h3>
+      <p class="card-text">{{book.review}}</p>
+    </div>
+    <div class="card-footer text-muted">
+      <h5 class="card-text">Posted by {{users.name}}</h5>
+    </div>
+  </div>
   <div>
     <h3>Review this Book</h3>
     <form class="new-review">
@@ -19,7 +40,8 @@
     </form>
   </div>
 
-  <button class="wishlist-button" book-id="{{book_id}}" title="{{title}}" genre="{{genre}}" author="{{author}}">Add to Wishlist!</button>
+  <button class="wishlist-button" book-id="{{book_id}}" title="{{title}}" genre="{{genre}}" author="{{author}}">Add to
+    Wishlist!</button>
 
 </div>
 

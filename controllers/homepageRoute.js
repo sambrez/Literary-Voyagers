@@ -50,15 +50,13 @@ router.get("/books/:id", withAuth, async (req, res) => {
   try {
     const oneBook = await Books.findOne({
       where: { id: req.params.id },
-      attributes: ["title", "author", "genre"],
+      attributes: ["title", "author", "genre", "recommendation", "review", "user_id"],
       include: [
         {
-          model: User,
-          attributes: ["name"],
+          model: User
         },
         {
-          model: Reviews,
-          attributes: ["review", "date_created", "recommendation", "user_id"],
+          model: Reviews
         },
       ],
     });
