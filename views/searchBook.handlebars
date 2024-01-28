@@ -1,16 +1,77 @@
 <div>
-    <form id="book-form">
-        <label for="title">Search by book title</label>
-        <input type="text" class="form-control" id="title" placeholder="Title">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <h3 class="m-20 p-20">
+        Add a new book by filling out the form to the right. You can manually enter any book, or to get started, you can search possible books by title. 
+    </h3>
 </div>
+<br>
+<br>
+<br>
+<br>
 
-<container id="book-list">
-    <div id="list" class=" row card-deck">
+<div class="row">
+    <div class="col-7">
+        <div>
+            <form class="col-8" id="book-form">
+                <label for="title">Search by book title</label>
+                <input type="text" class="form-control" id="title" placeholder="Title">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <container id="book-list">
+            <div id="list" class=" row card-deck">
+            </div>
+        </container>
     </div>
-</container>
-
-{{!-- add a button for enter manually --}}
+    <div class="col-5">
+        <form id="book">
+            <div id="book-details" class="form-row">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="bookTitle" value="" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" value="" placeholder="Author">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <select class="form-control" name="genre" id="genre">
+                    <option disabled selected value> -- select a genre-- </option>
+                    <option value="Biographies">Biographies</option>
+                    <option value="Classics">Classics</option>
+                    <option value="Current Affairs">Current Affairs</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="General Fiction">General Fiction</option>
+                    <option value="Historical Fiction">Historical Fiction</option>
+                    <option value="History">History</option>
+                    <option value="Mystery & Thrillers">Mystery & Thrillers</option>
+                    <option value="Romance">Romace</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Self-Help">Self-Help</option>
+                    <option value="Social Sciences">Social Sciences</option>
+                    <option value="True Crime">True Crime</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rec">Would you recommend this book?</label>
+                    <select class="form-control" id="rec" name="rec">
+                        <option disabled selected value>-- yes/no --</option>
+                        <option value="true">YES</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review">Enter your review here</label>
+                    <textarea class="form-control" id="review" rows="3"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
 
 <script src="/js/book.js"></script>
