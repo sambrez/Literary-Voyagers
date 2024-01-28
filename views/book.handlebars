@@ -21,22 +21,25 @@
       <h5 class="card-text">Posted by {{users.name}}</h5>
     </div>
   </div>
+
   <div>
     <h3>Review this Book</h3>
-    <form class="new-review">
-      <fieldset>
-        <legend>Recommendation</legend>
-        <label for="recommendation">Do you recommend this book?</label>
-        <select name="recommendation" id="recommendation">
-          <option value="true">YES</option>
-          <option value="false">NO</option>
-        </select>
-      </fieldset>
-      <fieldset>
-        <legend>Review</legend>
-        <textarea id="review" name="review" rows="4" cols="50">Write your review</textarea>
-      </fieldset>
-      <button type="submit">Submit</button>
+    <form id="new-review">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="recommendation">Would you recommend this book?</label>
+          <select class="form-control" id="recommendation" name="recommendation">
+            <option value="true">YES</option>
+            <option value="false">No</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="review">Enter your review here</label>
+          <textarea class="form-control" id="review" rows="3"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     </form>
   </div>
 
