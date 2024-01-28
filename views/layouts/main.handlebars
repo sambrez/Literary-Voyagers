@@ -24,13 +24,16 @@
               <li class="dropdown">
                 <a href="#">Menu</a>
                 <div class="dropdown-content">
-                  <a href="#">My Books</a>
+                  <a href="/controllers/api/">My Books</a>
                   <a href="#">Reviews</a>
                   <a href="#">My Profile</a>
                   <a href="#">Login</a>
                 </div>
               </li>
             </ul>
+          
+
+
             <!-- Conditionally render login or logout links -->
             {{#if logged_in}}
             <a href="/profile">profile</a> |
@@ -39,7 +42,12 @@
             <a href="/login">login</a>
             {{/if}}
           </nav>
-        </header>
+          <!-- Buttons -->
+        {{#if logged_in}}
+         {{> login}}
+         {{> reviews}}
+         {{> profile}}
+        {{/if}}
 
       </header>
       <main class="container container-fluid mt-5 bg-none">
