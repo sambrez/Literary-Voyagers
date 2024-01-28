@@ -22,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get("/search_book", (req, res) => {
-  res.render("searchBook");
+  res.render("newBook");
 });
 
 module.exports = router;
