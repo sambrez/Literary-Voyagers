@@ -21,6 +21,10 @@ router.get('/', withAuth, async (req, res) => {
       }
 });
 
+router.get("/search_book", (req, res) => {
+  res.render("searchBook");
+});
+
 router.get("/add_book", (req, res) => {
   res.render("newBook");
 });
