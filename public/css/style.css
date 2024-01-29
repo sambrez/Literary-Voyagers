@@ -42,6 +42,12 @@
   float: left;
 }
 
+#main-desc {
+  align-content: center;
+  text-align:center;
+  font-family: Arial;
+}
+
 .wishlist-button {
   justify-content: center;
   align-self: center;
