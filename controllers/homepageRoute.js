@@ -69,11 +69,11 @@ router.get("/books/:id", withAuth, async (req, res) => {
 
 router.get('/wishlist', withAuth, async (req, res) => {
   try {
-    const userId = req.session.user_id;
+
 
     // Retrieve the user's wishlist including associated books
     const userWishlist = await Wishlist.findAll({
-      where: { userId },
+      where: { userId: req.session.user_id },
       include: [
         {
           model: Books,
@@ -94,7 +94,6 @@ router.get('/wishlist', withAuth, async (req, res) => {
   }
 });
 
-module.exports = router;
 
 // for login and sign up
 router.get("/login", (req, res) => {
