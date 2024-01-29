@@ -18,7 +18,7 @@ const newReview = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.reload();
       } else {
         alert('Failed to add review');
       }
