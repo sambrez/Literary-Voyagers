@@ -31,7 +31,7 @@ Books.init(
     review: {
       type: DataTypes.STRING,
       // allowNull: false
-    }, 
+    }, // remove review
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,

@@ -238,7 +238,7 @@ const addBook = async (event) => {
     genre: genre,
     recommendation: recommendation,
     review: review
-  };
+  }; // issue area
 
   try {
     const response = await fetch('/api/books', {

@@ -1,7 +1,6 @@
 /* Backround image */
 .box {
   background-image: url(backround.jpeg);
-  height: 200vh;
   background-position: center;
   background-size: cover;
 }
@@ -211,7 +210,6 @@ h1 {
 }
 
 h5 {
-  background-color: aqua;
   cursor: pointer;
   text-align: center;
   text-decoration: underline;
