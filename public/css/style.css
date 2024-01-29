@@ -39,6 +39,12 @@
   float: left;
 }
 
+#main-desc {
+  align-content: center;
+  text-align:center;
+  font-family: Arial;
+}
+
 .wishlist-button {
   justify-content: center;
   align-self: center;
@@ -60,7 +66,7 @@
   border-radius: 25px;
   margin: 2px;
   padding: 5px;
-  width: 1050px;
+  width: 100%;
 }
 
 .all-reviews {
@@ -179,9 +185,9 @@
   justify-content: center;
 }
 
-.row {
+/* .row {
   width: 1280px;
-}
+} */
 
 .container {
   display: flex;
@@ -245,3 +251,15 @@ a {
   text-align: center;
   text-decoration: underline;
 }
+
+.logout {
+  text-decoration: none;
+  font-family: "Cambria, Cochin, Georgia, Times, Times New Roman, serif";
+  color: black;
+}
+
+.logout:hover {
+background-color: lightgray;
+border-radius: 0;
+color: white;
+} 
