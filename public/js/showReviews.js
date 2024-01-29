@@ -1,6 +1,12 @@
 function showDiv() {
-    const div = document.getElementById('hidden-reviews');
-    div.setAttribute("style", "display: block")
+    const div = document.querySelector('.hidden-reviews');
+
+    if (div.getAttribute("style") === "display: none") {
+        div.setAttribute("style", "display: block")
+    } else {
+        div.setAttribute("style", "display: none")
+    }
  };
 
- document.getElementById("clickOn").addEventListener('click', showDiv);
+ document.querySelector(".clickOn").addEventListener('click', showDiv);
+

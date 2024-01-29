@@ -28,7 +28,7 @@
   text-decoration: white;
 }
 
-#hidden-reviews {
+.hidden-reviews {
   display: none;
 }
 
