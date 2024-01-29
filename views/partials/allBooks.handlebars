@@ -18,8 +18,8 @@
     <p class="card-text review">{{review}}</p>
   </div>
   <div>
-    <button id="clickOn" type="button" class="btn btn-secondary btn-lg btn-block">View Additional Reviews</button>
-    <div id="hidden-reviews">
+    <button type="button" class="btn btn-secondary btn-lg btn-block clickOn">View Additional Reviews</button>
+    <div>
       {{#each reviews as |review|}}
       {{> allReviews review}}
       {{/each}}
