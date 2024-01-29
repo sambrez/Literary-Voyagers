@@ -1,3 +1,18 @@
+const getElements = (event) => {
+  const element = event.target;
+        const details= element.getAttribute("data-value");
+        const array = details.split("/");
+        const title = array[0];  
+        const author = array[1];  
+        console.log(title);   
+
+        document.querySelector('#bookTitle').setAttribute("value", title);
+        document.querySelector('#bookTitle').setAttribute("placeholder", title);
+
+        document.querySelector('#author').setAttribute("value", author);
+        document.querySelector('#author').setAttribute("placeholder", author);
+};
+
 const searchBook = (event) => {
   event.preventDefault();
 
@@ -37,191 +52,31 @@ const searchBook = (event) => {
       });
 
       const one = document.getElementById('1');
-      
-    
-      one.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const two = document.getElementById('2');
-      
-    
-      two.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const three = document.getElementById('3');
-      
-    
-      three.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const four = document.getElementById('4');
-      
-    
-      four.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const five = document.getElementById('5');
-      
-    
-      five.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const six = document.getElementById('6');
-      
-    
-      six.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const seven = document.getElementById('7');
-      
-    
-      seven.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const eight = document.getElementById('8');
-      
-    
-      eight.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const nine = document.getElementById('9');
-      
-    
-      nine.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
-
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
-
       const ten = document.getElementById('10');
-      
-    
-      ten.addEventListener("click", function(event) {
-        const element = event.target;
-        const details= element.getAttribute("data-value");
-        const array = details.split("/");
-        const title = array[0];  
-        const author = array[1];  
-        console.log(title);   
 
-        document.querySelector('#bookTitle').setAttribute("value", title);
-        document.querySelector('#bookTitle').setAttribute("placeholder", title);
-
-        document.querySelector('#author').setAttribute("value", author);
-        document.querySelector('#author').setAttribute("placeholder", author);
-      });
+      one.addEventListener("click", getElements);
+      two.addEventListener("click", getElements);
+      three.addEventListener("click", getElements);
+      four.addEventListener("click", getElements);
+      five.addEventListener("click", getElements);
+      six.addEventListener("click", getElements);
+      seven.addEventListener("click", getElements);   
+      eight.addEventListener("click", getElements);
+      nine.addEventListener("click", getElements);
+      ten.addEventListener("click", getElements);
     })
     .catch(error => {
       console.log(error);
     })
 };
-
-
 
 const addBook = async (event) => {
   event.preventDefault();
