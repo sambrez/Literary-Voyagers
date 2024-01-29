@@ -1,17 +1,19 @@
 <div class="text-center">
   <h2>{{name}}'s Books</h2>
+  <br>
+  <div>
+    <button class="btn btn-secondary btn-lg add-book" type="submit"><a href="/profile/search_book">Add New Book</a></button>
+  </div>
+  <br>
   {{#if books.length}}
   <div>
     {{#each books as |book|}}
     {{> profileBook book}}
     {{/each}}
   </div>
-  </div>
-  {{else}}
-  <p>You don't have any posted book reviews yet.</p>
-  <p> Click the button below to get started!</p>
-  {{/if}}
-  <div>
-    <button type="submit"><a href="/profile/search_book">Add New Book</a></button>
-    </div>
+</div>
+{{else}}
+<p>You don't have any posted book reviews yet.</p>
+<p> Click the button above to get started!</p>
+{{/if}}
 </div>

@@ -1,13 +1,13 @@
-<div class="card text-center">
+<div class="card text-center all-books">
   <div class="card-header">
     <a href="/books/{{id}}">
       <h2>{{title}}</h2><a />
   </div>
-  <div class="card-title">
+  <div class="card-title details">
     <h3>Author: {{author}}</h3>
     <h3>Genre: {{genre}}</h3>
   </div>
-  <div class="card-body">
+  <div class="card-body recs">
     <h3>Recommendation:</h3>
     {{#if recommendation}}
     {{get_thumbsUp}}
@@ -15,7 +15,7 @@
     {{get_thumbsDown}}
     {{/if}}
     <h3>Review:</h3>
-    <p class="card-text">{{review}}</p>
+    <p class="card-text review">{{review}}</p>
   </div>
   <div class="card-footer text-muted">
     <h5 class="card-text">Posted by {{user.name}}</h5>
