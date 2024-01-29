@@ -60,7 +60,23 @@
    margin: 0;
    padding: 0;
 }
-      
+
+#small {
+  margin: 2px;
+  padding: 2px;
+  justify-content: center;
+}
+
+#list {
+  width: 740px;
+  max-height: 500px;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.row {
+width: 1280px;
+}
 
 .container {
   display: flex;
@@ -91,6 +107,12 @@
  /* color: #08080800; */
 }
 
+h5 {
+  background-color: aqua;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
 
  h2 {
   background-color: rgba(239, 243, 243, 0);
@@ -112,3 +134,9 @@ a {
   
 }
 
+.select h5 {
+  background-color: aqua;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}

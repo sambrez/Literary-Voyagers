@@ -42,7 +42,7 @@ const newReview = async (event) => {
   // };
 
   document
-  .querySelector('.new-review')
+  .querySelector('#new-review')
   .addEventListener('submit', newReview);
 
   // document
