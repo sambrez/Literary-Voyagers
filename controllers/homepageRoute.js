@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Books, Reviews, User } = require("../models");
+const { Books, Reviews, User, Wishlist } = require("../models");
 const withAuth = require("../utils/auth");
 
 // GET for all books posted by all users
@@ -57,6 +57,35 @@ router.get("/books/:id", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/wishlist', withAuth, async (req, res) => {
+  try {
+    const userId = req.session.user_id;
+
+    // Retrieve the user's wishlist including associated books
+    const userWishlist = await Wishlist.findAll({
+      where: { userId },
+      include: [
+        {
+          model: Books,
+          attributes: ['id', 'title', 'genre', 'author'],
+        },
+      ],
+    });
+
+    const wishlist = userWishlist.map((item) => item.get({ plain: true }));
+
+    res.render('wishlist', {
+      wishlist,
+      logged_in: req.session.logged_in,
+    });
+  } catch (error) {
+    console.error('Error retrieving wishlist:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+module.exports = router;
 
 // for login and sign up
 router.get("/login", (req, res) => {

@@ -108,7 +108,7 @@ width: 1280px;
 }
 
 h5 {
-  background-color: rgb(237, 242, 242);
+  background-color: aqua;
   cursor: pointer;
   text-align: center;
   text-decoration: underline;
@@ -135,14 +135,8 @@ a {
 }
 
 .select h5 {
-  background-color: rgba(0, 255, 255, 0);
+  background-color: aqua;
   cursor: pointer;
   text-align: center;
   text-decoration: underline;
-}
-
-li.dropdown {
-  color: #000000;
-  text-decoration: none;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
