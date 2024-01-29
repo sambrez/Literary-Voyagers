@@ -20,13 +20,19 @@ Books.hasMany(Reviews, {
   foreignKey: 'book_id'
 });
 
+Books.hasMany(Wishlist, {
+  foreignKey: 'book_id',
+  sourceKey: 'id', 
+});
+
 Reviews.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Reviews.belongsTo(Books, {
-  foreignKey: 'book_id'
-})
+Wishlist.belongsTo(Books, {
+  foreignKey: 'book_id',
+  targetKey: 'id',
+});
 
 Wishlist.belongsTo(User, {
   foreignKey: 'user_id'
