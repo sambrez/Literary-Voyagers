@@ -7,7 +7,7 @@ const searchBook = (event) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '',
+      'X-RapidAPI-Key': '811d01c47cmshfe978824f72c1b8p14fe08jsn9ea88cc80866',
       'X-RapidAPI-Host': 'goodreads-books.p.rapidapi.com'
     }
   };
@@ -24,7 +24,7 @@ const searchBook = (event) => {
 
       data.forEach(book => {
         const html =
-          `<div id="small" class="col-5 card" style="justify-content-center">
+          `<div class="col-5 card small" style="justify-content-center">
                 <img class="card-img-top" src="${book.smallImageURL}" alt="book cover">
               <div id="${arr++}" class="card-body">
               <h5 data-value="${book.title}/ ${book.author}" class="btn btn-info card-title">${book.title}</h5>
