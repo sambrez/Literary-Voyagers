@@ -1,9 +1,12 @@
-/* Backround image */
+/* Background image */
 .box {
   background-image: url(backround.jpeg);
   background-position: center;
   background-size: cover;
+  height: 100%;
+
 }
+
 .login {
   background-color: #6f696900;
   text-align: center;
@@ -223,6 +226,8 @@ h2 {
 #new-review {
   justify-content: center;
   align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 h3 {
@@ -257,3 +262,7 @@ background-color: lightgray;
 border-radius: 0;
 color: white;
 } 
+
+.black {
+  color: black;
+}
