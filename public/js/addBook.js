@@ -22,7 +22,7 @@ const searchBook = (event) => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '811d01c47cmshfe978824f72c1b8p14fe08jsn9ea88cc80866',
+      'X-RapidAPI-Key': '',
       'X-RapidAPI-Host': 'goodreads-books.p.rapidapi.com'
     }
   };
