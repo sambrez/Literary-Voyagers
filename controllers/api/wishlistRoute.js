@@ -28,34 +28,5 @@ router.post('/add', async (req, res) => {
   }
 });
 
-
-// GET Wishlist
-router.get('/wishlist', withAuth, async (req, res) => {
-  try {
-    console.log('Entered /wishlist route'); // Log that the route is entered
-    console.log('User ID:', req.session.user_id); // Log user_id
-
-    const userWishlist = await Wishlist.findAll({
-      where: { user_id: req.session.user_id },
-      include: [
-        {
-          model: Books,
-          attributes: ['id', 'title', 'genre', 'author'],
-        },
-      ],
-    });
-
-    const wishlist = userWishlist.map((item) => item.get({ plain: true }));
-    console.log('Wishlist Data:', wishlist); // Log wishlist data
-
-    res.render('wishlist', {
-      wishlist,
-      logged_in: req.session.logged_in,
-    });
-  } catch (error) {
-    console.error('Error retrieving wishlist:', error);
-    res.status(500).render('error', { error }); // Render an error page
-  }
-});
-
 module.exports = router;
+

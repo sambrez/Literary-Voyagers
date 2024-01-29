@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
   var wishlistButtons = document.querySelectorAll('.wishlist-button');
 
@@ -16,31 +17,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Function to handle adding to wishlist
-  function addToWishlist(bookId, genre, author, bookTitle) {
-    fetch('/api/wishlist/add', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ book_id: bookId, genre, author, bookTitle }),
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.success) {
-        alert('Book added to wishlist successfully!');
+  async function addToWishlist(bookId, genre, author, bookTitle) {
+    try {
+      const response = await fetch("/api/wishlist/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          book_id: bookId,
+          genre: genre,
+          author: author,
+          bookTitle: bookTitle,
+        }),
+      });
+
+      const data = await response.json();
+      const modalMessageElement = document.getElementById("wishlistModalMessage");
+
+      if (response.ok) {
+        modalMessageElement.textContent = "Book added to wishlist successfully!";
       } else {
-        alert('Error adding book to wishlist.');
+        modalMessageElement.textContent = "Error adding book to wishlist. Please try again.";
       }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Error adding book to wishlist. Please try again later.');
-    });
+
+      $("#wishlistModal").modal("show");
+    } catch (error) {
+      console.error("Error adding to wishlist:", error);
+    }
   }
 });
