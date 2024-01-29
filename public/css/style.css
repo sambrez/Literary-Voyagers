@@ -19,6 +19,12 @@
   width: 100px;
 }
 
+.book {
+  justify-content: center;
+  width: auto;
+
+}
+
 .all-books {
   margin: 10px;
   padding: 10px;
@@ -29,8 +35,37 @@
   text-decoration: white;
 }
 
+#spacer {
+  margin: 20px;
+  float: left;
+}
+
+.wishlist-button {
+  justify-content: center;
+  align-self: center;
+  margin: 40px;
+  width: 500px;
+}
+
+#sub-button{
+  justify-content: center;
+  align-self: center;
+  margin: 40px;
+  float: left;
+}
+
 .hidden-reviews {
   display: none;
+  text-wrap: wrap;
+  align-content: center;
+  border-radius: 25px;
+  margin: 2px;
+  padding: 5px;
+  width: 1050px;
+}
+
+.all-reviews {
+  display: block;
   text-wrap: wrap;
   align-content: center;
   border: .5px solid grey;
@@ -185,6 +220,11 @@ h5 {
 h2 {
   background-color: rgba(239, 243, 243, 0);
   color: #000000f9;
+}
+
+#new-review {
+  justify-content: center;
+  align-content: center;
 }
 
 h3 {
