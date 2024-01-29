@@ -23,27 +23,18 @@
             <ul>
               <li class="dropdown">Menu
                 <div class="dropdown-content">
-                  <a href="/controllers/api/booksRoute.js">My Books</a>
-                  <a href="/controllers/api/reviewsRoute.js">Reviews</a>
-                  <a href="/controllers/profileRoute.js">My Profile</a>
-                  <a href="#">Login</a>
+                  <a href="/">Home</a>
+                  <a href="/profile">My Profile</a>
+                  {{#if logged_in}}
+                  <button class="no-button" id="logout">logout</button>
+                  {{else}}
+                  <a href="/login">Login</a>
+                  {{/if}}
                 </div>
               </li>
             </ul>
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <a href="/profile">profile</a> |
-            <button class="no-button" id="logout">logout</button>
-            {{else}}
-            <a href="/login">login</a>
-            {{/if}}
           </nav>
           <!-- Buttons -->
-        {{#if logged_in}}
-         {{> login}}
-         {{> reviews}}
-         {{> profile}}
-        {{/if}}
 
       </header>
       <main class="container container-fluid mt-5 bg-none">

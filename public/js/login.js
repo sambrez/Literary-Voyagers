@@ -1,4 +1,14 @@
-//login event handler 
+// Function to show login error modal
+const showLoginErrorModal = () => {
+    $('#loginErrorModal').modal('show');
+};
+
+// Function to show signup error modal
+const showSignupErrorModal = () => {
+    $('#signupErrorModal').modal('show');
+};
+
+// Login event handler
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -15,12 +25,13 @@ const loginFormHandler = async (event) => {
         if (login.ok) {
             document.location.replace('/');
         } else {
-            ;
+            // Show login error modal
+            showLoginErrorModal();
         }
     }
 };
 
-// sign up event handler
+// Signup event handler
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
@@ -38,18 +49,18 @@ const signupFormHandler = async (event) => {
         if (response.ok) {
             document.location.replace('/profile');
         } else {
-            alert(response.statusText);
+            // Show signup error modal
+            showSignupErrorModal();
         }
     }
 };
 
-// event listener for login button
+// Event listener for login button
 document
     .querySelector('#login-form')
     .addEventListener('submit', loginFormHandler);
 
-
-// event listener for sign up button
+// Event listener for sign up button
 document
     .querySelector('#signup-form')
     .addEventListener('submit', signupFormHandler);
