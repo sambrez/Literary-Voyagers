@@ -245,3 +245,15 @@ a {
   text-align: center;
   text-decoration: underline;
 }
+
+.logout {
+  text-decoration: none;
+  font-family: "Cambria, Cochin, Georgia, Times, Times New Roman, serif";
+  color: black;
+}
+
+.logout:hover {
+background-color: lightgray;
+border-radius: 0;
+color: white;
+} 
