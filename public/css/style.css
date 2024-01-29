@@ -1,7 +1,6 @@
 /* Backround image */
 .box {
   background-image: url(backround.jpeg);
-  height: 200vh;
   background-position: center;
   background-size: cover;
 }
