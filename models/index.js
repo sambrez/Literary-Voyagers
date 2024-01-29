@@ -28,13 +28,12 @@ Reviews.belongsTo(Books, {
   foreignKey: 'book_id'
 })
 
-Wishlist.belongsTo(User,{
+Wishlist.belongsTo(User, {
   foreignKey: 'user_id'
-})
+});
 
 Wishlist.hasMany(Books, {
   foreignKey: 'book_id'
-})
-// changed books to book, but may need to alter different file, is this causing review issues?
+});
 
 module.exports = { User, Books, Reviews, Wishlist };
