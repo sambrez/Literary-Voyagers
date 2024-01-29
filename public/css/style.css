@@ -28,6 +28,10 @@
   text-decoration: white;
 }
 
+#hidden-reviews {
+  display: none;
+}
+
 .details {
   border: 0.5px solid rgb(206, 197, 197);
   border-radius: 25px;
