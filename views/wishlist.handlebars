@@ -1,7 +1,13 @@
 {{#each wishlist}}
-  <div>
-    <h2>{{book.title}}</h2>
-    <p>Author: {{book.author}}</p>
-    <p>Genre: {{book.genre}}</p>
+  <div class="card text-center all-books">
+  <div class="card-header">
+    <a href="/books/{{id}}">
+      <h2>{{book.title}}</h2><a />
   </div>
+  <div class="card-body">
+    <h3>Author: {{book.author}}</h3>
+    <h3>Genre: {{book.genre}}</h3>
+  </div>
+</div>
 {{/each}}
+
