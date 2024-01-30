@@ -59,6 +59,8 @@ router.post('/', async (req, res) => {
   }
 });
 
+// FOR FUTURE DEVELOPMENT
+
 // DELETE a review by ID
 // router.delete('/:id', async (req, res) => {
 //   const { id } = req.params;

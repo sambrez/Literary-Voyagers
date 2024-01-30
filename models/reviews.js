@@ -24,7 +24,7 @@ Reviews.init(
     recommendation: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-        // true for thumbs up, false for thumbs down (this can be changed to 0/10 if time allows)
+        // true for thumbs up, false for thumbs down
     },
     user_id: {
       type: DataTypes.INTEGER,

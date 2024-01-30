@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 
+// function to send welcome email when email recipient, subject, and email content are supplied
 const sendEmail = async (to, subject, text) => {
   try {
     const transporter = nodemailer.createTransport({
