@@ -1,3 +1,4 @@
+// function that targets title and author selected from searched books to autopopulate the form
 const getElements = (event) => {
   const element = event.target;
         const details= element.getAttribute("data-value");
@@ -13,6 +14,7 @@ const getElements = (event) => {
         document.querySelector('#author').setAttribute("placeholder", author);
 };
 
+// function that fetches data from goodReads API
 const searchBook = (event) => {
   event.preventDefault();
 
@@ -36,7 +38,7 @@ const searchBook = (event) => {
     )
     .then(data => {
       let arr = 1;
-
+// displays a card for each book 
       data.forEach(book => {
         const html =
           `<div class="col-5 card small" style="justify-content-center">
@@ -51,6 +53,7 @@ const searchBook = (event) => {
         document.querySelector('#list').insertAdjacentHTML('beforeend', html);
       });
 
+      // query selectors and event handlers for each book in the search list to autopopulate the form
       const one = document.getElementById('1');
       const two = document.getElementById('2');
       const three = document.getElementById('3');
@@ -78,6 +81,7 @@ const searchBook = (event) => {
     })
 };
 
+// POST for adding a new book
 const addBook = async (event) => {
   event.preventDefault();
 
@@ -93,7 +97,7 @@ const addBook = async (event) => {
     genre: genre,
     recommendation: recommendation,
     review: review
-  }; // issue area
+  }; 
 
   try {
     const response = await fetch('/api/books', {
@@ -116,6 +120,8 @@ const addBook = async (event) => {
     console.error('Error adding book:', error.message);
   }
 };
+
+// event listeners for searching books and adding books
 
 document.querySelector('#book-form').addEventListener('submit', searchBook);
 

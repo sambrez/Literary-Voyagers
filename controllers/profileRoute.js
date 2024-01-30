@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Books, User, Reviews, Wishlist } = require('../models');
 const withAuth = require('../utils/auth');
 
+// GET for user's profile page - displays books user has posted
 router.get('/', withAuth, async (req, res) => {
     
     try {
@@ -21,6 +22,7 @@ router.get('/', withAuth, async (req, res) => {
       }
 });
 
+// GET for page for user to add a new book
 router.get("/search_book", (req, res) => {
   res.render("newBook");
 });

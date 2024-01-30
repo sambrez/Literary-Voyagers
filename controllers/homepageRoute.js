@@ -101,7 +101,7 @@ router.get('/wishlist', withAuth, async (req, res) => {
 });
 
 
-// for login and sign up
+// redirection for if user isn't logged in for login and sign up
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/");
@@ -110,10 +110,5 @@ router.get("/login", (req, res) => {
     res.render("login");
   }
 });
-
-
-
-
-
 
 module.exports = router;

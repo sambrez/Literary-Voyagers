@@ -1,3 +1,4 @@
+// POST for adding a review to a book
 const newReview = async (event) => {
     event.preventDefault();
   
@@ -24,6 +25,8 @@ const newReview = async (event) => {
       }
     }
   };
+  
+// FOR FUTURE DEVELOPMENT
   
   // const deleteReview = async (event) => {
   //   if (event.target.hasAttribute('data-id')) {

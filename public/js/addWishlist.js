@@ -1,4 +1,4 @@
-
+// POST adding books to user's wishlist
 document.addEventListener('DOMContentLoaded', function () {
   var wishlistButtons = document.querySelectorAll('.wishlist-button');
 

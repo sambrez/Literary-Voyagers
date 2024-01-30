@@ -1,3 +1,6 @@
+// helper function for displaying date (wasn't used but for future development)
+// helper functions for recommendation emojis
+
 module.exports = {
     format_date: (date) => {
       // Format date as MM/DD/YYYY
